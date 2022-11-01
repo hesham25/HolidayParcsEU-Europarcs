@@ -2,8 +2,18 @@ import csv
 from time import sleep
 import requests
 import datetime as _dt
+import requests
 
+response = requests.get(
+  url='https://proxy.scrapeops.io/v1/',
+  params={
+      'api_key': 'd26155bf-4a6e-47e7-b42d-303f875cc3f9',
+      'url': 'https://quotes.toscrape.com/', 
+  },
+)
 
+print('Response Body: ', response.content)
+      
 class EuroparcsAPI:
     def __init__(self) -> None:
         self.ACCOMMODATIONS_data = []
