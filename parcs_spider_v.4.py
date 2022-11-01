@@ -2,7 +2,6 @@ import csv
 from time import sleep
 import requests
 import datetime as _dt
-import requests
 
 response = requests.get(
   url='https://proxy.scrapeops.io/v1/',
