@@ -267,15 +267,16 @@ class EuroparcsAPI:
             csv_writer.writerows(data)
     
     def save_data(self):
+        now = _dt.datetime.now().__str__().split('.')[0].replace(':', '-')
         print('\nSaving the data')
         if len(self.rates_results):
-            self.save_csv_file('Rates Data'+str(datetime.now())+'.csv', self.rates_results)
+            self.save_csv_file('Rates Data' + now +'.csv', self.rates_results)
         
         if len(self.accommodations_results):
-            self.save_csv_file('Accommodations Data 011121.csv', self.accommodations_results)
+            self.save_csv_file('Accommodations Data' + now +'.csv', self.accommodations_results)
         
         if len(self.parcs_results):
-            self.save_csv_file('Parcs Data.csv', self.parcs_results)
+            self.save_csv_file('Parcs Data' + now + '.csv', self.parcs_results)
     
     def main(self):
         try:
